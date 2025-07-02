@@ -112,7 +112,7 @@ internal class MethodCallHandlerImpl(context: Context, activity: Activity?) : Me
 
             if (subsManager.activeSubscriptionInfoList != null) {
 
-                for (subsInfo in subsManager.activeSubscriptionInfoList) {
+                subsManager.activeSubscriptionInfoList?.forEach { subsInfo ->
                     if (subsInfo != null) {
                         try {
                             val data = hashMapOf(
